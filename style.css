@@ -1,0 +1,113 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#0f2027,#203a43,#1c4658 );
+}
+
+.calculator{
+    width: 340px;
+    position: relative;
+    padding: 15px;
+    border-radius: 25px;
+    background: linear-gradient(145deg,#03121e,#051725);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .5) inset 2px 2px 4px rgba(255, 255, 255, 0.08);
+    
+}
+.display-frame{
+     background: #2d2d2d;
+     width: 100%;
+     position: relative;
+     box-sizing: border-box;
+     padding: 8px;
+     border-radius: 22px 22px 12px 12px;
+     margin-bottom: 10px;
+     box-shadow: inset 10px 18px rgba(0, 0, 0, .6),0 2px 3px rgba(255, 255, 255, .08)
+
+}
+.display{
+    background: #222;
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% + 8px);
+    margin-right: -6px;
+    padding: 10px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: inset0px 2px 4px rgba(255, 255, 255, .08) inset0 -3px 6px rgba(0,0,0,.7);
+}
+
+
+.display input{
+   width: 100%;
+   overflow-x: auto;
+   white-space: nowrap;
+   text-overflow: clip;
+   padding: 10px 15px;
+   height:75px ;
+   border:none ;
+   outline: none;
+   border-radius: 12px;
+   background: #eef5df;
+   color: #222;
+   font-size: 35px;
+   font-style: italic;
+   text-align: right;
+   margin: 0;
+   padding-right: 0px;
+   box-sizing: border-box;
+   
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 55px);
+    row-gap: 16px;
+    column-gap: 18px;
+    margin-top: 25px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 12px;
+
+
+}
+
+.buttons button{
+    width: 55px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    background:#ffffff;
+    box-shadow: 0 8px 0 #6f6f6f,0 18px 30px rgba(0, 0, 0,0.55) inset,0 2px 2px rgba(255, 255, 255, 0.9);
+    transition: all .15s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    transition: 0.25s;
+
+} .buttons button:hover{
+    transform: translateY(-4px);
+}
+.buttons button:active{
+    transform: translateY(6px);
+    background: linear-gradient(to bottom, #9d9d9d,#7f7f7f);
+box-shadow:
+    0 2px 0 #4a4a4a,  0 4px 8px rgba(0,0,0,.4),
+    inset 0 3px 6px rgba(0, 0, 0, .4);
+    background: #022635;
+    transform: scale(0.95);
+}
